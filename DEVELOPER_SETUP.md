@@ -12,20 +12,21 @@
 first_app/
 ├── web_app/           # Web application
 │   ├── frontend/      # React frontend
-│   └── backend/       # Node.js backend
+│   └── backend/       # python backend
 ├── mobile_app/        # React Native mobile app
 └── ai_components/     # AI/ML components
 ```
 
 ## 1. Web Application Setup
 
-### Backend Setup
+### Backend Setup (Flask)
 ```bash
 cd web_app/backend
-npm install
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
 cp .env.example .env  # Configure your environment variables
-npm run db:migrate    # Run database migrations
-npm run dev          # Start development server
+flask run  # Start development server
 ```
 
 ### Frontend Setup
